@@ -97,12 +97,12 @@ int deleteElements(TABLEAU* tab, int startPos, int endPos)
 		return -1;
 	}
 	int* tab2 = tab->elt;    //sauvegarde le tableau initial 
-	int c = 0;
+	int a = 0;
 	for (int i = 0; i < tab->size; i++) {
 		if (i<(startPos - 1) || i>(endPos - 1)) //On modifie les elements du tableau si l'indice est en dehors de l'intervalle
 		{
-			tab->elt[c] = tab2[i];
-			c++;
+			tab->elt[a] = tab2[i];
+			a++;
 		}
 	}
 	tab->size -= endPos - startPos + 1;
